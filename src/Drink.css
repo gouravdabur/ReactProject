@@ -1,0 +1,325 @@
+/* =========================
+   GLOBAL STYLING
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4fbff;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   DRINK PAGE
+========================= */
+
+.drink-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #eef9ff, #dff6ff);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.drink-container h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #0077b6;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   DRINK GRID
+========================= */
+
+.drink-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* =========================
+   DRINK CARD
+========================= */
+
+.drink-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+
+  transition: all 0.3s ease;
+}
+
+.drink-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.drink-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.drink-card:hover img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.drink-card h3 {
+  font-size: 20px;
+  color: #222;
+  margin-top: 10px;
+  padding: 0 14px;
+  min-height: 50px;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.drink-card p {
+  padding: 0 14px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+.price {
+  color: #0096c7;
+  font-size: 20px;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.rating {
+  color: #f39c12 !important;
+  font-size: 16px !important;
+  margin: 10px 0 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.add-cart-btn,
+.drink-card button {
+  width: calc(100% - 28px);
+
+  margin: 10px 14px 10px;
+
+  border: none;
+
+  background: linear-gradient(to right, #00b4d8, #0077b6);
+
+  color: white;
+
+  padding: 10px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.add-cart-btn i {
+  margin-right: 5px;
+}
+
+.add-cart-btn:hover,
+.drink-card button:hover {
+  background: linear-gradient(to right, #0077b6, #023e8a);
+  transform: scale(1.03);
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+  margin-top: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* PAGINATION BUTTON */
+
+.pagination button {
+  border: none;
+
+  min-width: 45px;
+  height: 42px;
+
+  padding: 0 12px;
+
+  background: #2c3e50;
+
+  color: white;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: all 0.3s ease;
+}
+
+/* PREV & NEXT */
+
+.pagination button:first-child,
+.pagination button:last-child {
+  background: #0077b6;
+}
+
+/* HOVER */
+
+.pagination button:hover {
+  background: #00b4d8;
+  transform: translateY(-3px);
+}
+
+/* ACTIVE BUTTON */
+
+.pagination .active {
+  background: orange;
+  color: black;
+}
+
+/* DISABLED */
+
+.pagination button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================
+   TOASTIFY
+========================= */
+
+.Toastify__toast-container {
+  width: auto;
+}
+
+.Toastify__toast--success {
+  background: #0077b6;
+  color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.Toastify__close-button {
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: white;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+  .drink-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+@media (max-width: 992px) {
+
+  .drink-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .drink-container {
+    padding: 20px;
+  }
+
+  .drink-container h1 {
+    font-size: 30px;
+  }
+
+  .drink-card img {
+    height: 220px;
+  }
+
+  .drink-card h3 {
+    font-size: 20px;
+  }
+
+  .drink-card p {
+    font-size: 18px;
+  }
+
+  .add-cart-btn {
+    font-size: 14px;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .drink-list {
+    grid-template-columns: 1fr;
+  }
+
+  .drink-container h1 {
+    font-size: 20px;
+  }
+
+  .drink-card img {
+    height: 220px;
+  }
+
+  .drink-card h3 {
+    font-size: 16px;
+  }
+
+  .pagination button {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+}

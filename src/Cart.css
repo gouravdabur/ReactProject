@@ -1,0 +1,281 @@
+/* =========================
+   CART CONTAINER
+========================= */
+.cart-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* TITLE */
+.cart-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* EMPTY CART */
+.empty-text {
+  text-align: center;
+  font-size: 20px;
+  color: gray;
+}
+
+/* =========================
+   CART ITEM
+========================= */
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-item img {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ITEM DETAILS */
+.item-details {
+  flex: 1;
+}
+
+.item-details h3 {
+  margin: 0;
+}
+
+.item-details p {
+  margin: 3px 0;
+}
+
+/* =========================
+   QUANTITY BUTTONS
+========================= */
+.quantity-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qty-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.qty-btn:hover {
+  background: #1e40af;
+}
+
+.qty-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* =========================
+   REMOVE BUTTON
+========================= */
+.remove-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #b91c1c;
+}
+
+/* =========================
+   DISCOUNT SECTION
+========================= */
+.discount-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f3f4f6;
+  border-radius: 10px;
+}
+
+.discount-section h2 {
+  margin-bottom: 10px;
+}
+
+.discount-section button {
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 8px 14px;
+  border: none;
+  background: #10b981;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.discount-section button:hover {
+  background: #059669;
+}
+
+/* =========================
+   COUPON SECTION
+========================= */
+.coupon-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fef3c7;
+  border-radius: 10px;
+}
+
+.coupon-input {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.coupon-btn {
+  padding: 8px 14px;
+  background: #f59e0b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.coupon-btn:hover {
+  background: #d97706;
+}
+
+/* =========================
+   PAYMENT METHOD
+========================= */
+.payment-method {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e0f2fe;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.payment-method button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #0ea5e9;
+  color: white;
+}
+
+.payment-method button:hover {
+  background: #0369a1;
+}
+
+/* =========================
+   QR SECTION
+========================= */
+.qr-section {
+  margin-top: 15px;
+  text-align: center;
+  padding: 15px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.qr-section h4 {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   TOTAL SECTION
+========================= */
+.total-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #111827;
+  color: white;
+  border-radius: 10px;
+}
+
+.total-section h2 {
+  margin-bottom: 10px;
+}
+
+.total-section h3 {
+  margin: 5px 0;
+}
+
+/* FINAL AMOUNT */
+.final-amount {
+  color: #22c55e;
+}
+
+/* =========================
+   CHECKOUT BUTTON
+========================= */
+.checkout-btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkout-btn:hover {
+  background: #16a34a;
+}
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+.clear-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.clear-btn:hover {
+  background: #991b1b;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .payment-method button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .coupon-input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
